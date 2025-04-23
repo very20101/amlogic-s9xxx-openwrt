@@ -314,6 +314,9 @@ jobs:
           ln -sf /builder/openwrt ${GITHUB_WORKSPACE}/openwrt
           ln -sf /builder/openwrt /home/runner/work/_actions/ophub/amlogic-s9xxx-openwrt/main/openwrt
 
+          cd openwrt
+          git clone https://github.com/kenzok8/small-package packages/smpackage
+
           # Set output information
           echo "build_tag=OpenWrt_${TAGS_NAME}_${{ inputs.openwrt_storage }}_$(date +"%Y.%m")" >> ${GITHUB_OUTPUT}
           echo -e "REPO_URL: [ ${REPO_URL} ]\nREPO_BRANCH: [ ${REPO_BRANCH} ]\nTAGS_NAME: [ ${TAGS_NAME} ]"
