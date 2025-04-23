@@ -104,5 +104,5 @@ rm -rf packages/op-retry
 #git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
   
 
-./scripts/feeds update -a
-./scripts/feeds install -f
+#./scripts/feeds update -a
+#./scripts/feeds install -f
