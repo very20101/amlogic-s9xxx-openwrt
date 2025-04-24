@@ -81,22 +81,22 @@ git clone https://github.com/very20101/openwrt_retry packages/op-retry
 # cp -rf packages/op-retry/pkg_modified/luci-app-dnscrypt-proxy2 packages/luci-app-dnscrypt-proxy2
 
 ## ruby 
-rm -f feeds/packages/lang/ruby
-cp -f packages/op-retry/pkg_modified/ruby feeds/packages/lang/ruby
+rm -rf feeds/packages/lang/ruby
+cp -rf packages/op-retry/pkg_modified/ruby feeds/packages/lang/ruby
 
 ## replace extra-package
 #git clone -b main https://github.com/very20101/openwrt_N1-Nova packages/opwrt_N1
 #cp -f packages/opwrt_N1/extra-package/shadowsocksr-libev feeds/packages/shadowsocksr-libev
 rm -rf feeds/packages/shadowsocks-libev
-cp -f packages/op-retry/pkg_modified/shadowsocks-libev feeds/packages/shadowsocks-libev
+cp -rf packages/op-retry/pkg_modified/shadowsocks-libev feeds/packages/shadowsocks-libev
 rm -rf feeds/smpackage/luci-app-passwall2
-cp -f packages/op-retry/pkg_modified/luci-app-passwall2 package/feeds/smpackage/luci-app-passwall2
-cp -f packages/op-retry/pkg_modified/luci-app-diskman package/feeds/smpackage/luci-app-diskman
+cp -rf packages/op-retry/pkg_modified/luci-app-passwall2 package/feeds/smpackage/luci-app-passwall2
+cp -rf packages/op-retry/pkg_modified/luci-app-diskman package/feeds/smpackage/luci-app-diskman
 
 rm -rf package/feeds/smpackage/lua-neturl
-cp -f packages/op-retry/pkg_modified/lua-neturl package/feeds/smpackage/lua-neturl
+cp -rf packages/op-retry/pkg_modified/lua-neturl package/feeds/smpackage/lua-neturl
 
-#rm -f packages/opwrt_N1
+#rm -rf packages/opwrt_N1
 rm -rf packages/op-retry
 
 # replace golang
@@ -104,5 +104,5 @@ rm -rf packages/op-retry
 #git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
   
 
-#./scripts/feeds update -a
-#./scripts/feeds install -f
+./scripts/feeds update -a
+./scripts/feeds install -f
