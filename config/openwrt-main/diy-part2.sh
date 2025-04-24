@@ -38,7 +38,7 @@ git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git packages/luci-t
 git clone https://github.com/sirpdboy/luci-theme-opentopd.git packages/luci-theme-opentopd
 
 ## Add extra package
-git clone https://github.com/kenzok8/small-package smpackage
+#git clone https://github.com/kenzok8/small-package smpackage
 #git clone https://github.com/kenzok8/small packages/small
 #rm -rf package/small/shadowsocks-rust
 #merge_package https://github.com/xiaorouji/openwrt-passwall-packages/shadowsocks-rust package/small/shadowsocks-rust
