@@ -33,12 +33,12 @@ git clone -b master --single-branch https://github.com/LGA1150/openwrt-fullconen
 
 # themes
 git clone https://github.com/rosywrt/luci-theme-rosy/tree/openwrt-18.06/luci-theme-rosy.git packages/luci-theme-rosy
-git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git packages/sluci-theme-infinityfreedom
+git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git packages/uci-theme-infinityfreedom
 git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git packages/luci-theme-opentomcat
 git clone https://github.com/sirpdboy/luci-theme-opentopd.git packages/luci-theme-opentopd
 
 ## Add extra package
-git clone git clone https://github.com/kenzok8/small-package smpackage
+git clone https://github.com/kenzok8/small-package smpackage
 #git clone https://github.com/kenzok8/small packages/small
 #rm -rf package/small/shadowsocks-rust
 #merge_package https://github.com/xiaorouji/openwrt-passwall-packages/shadowsocks-rust package/small/shadowsocks-rust
@@ -71,7 +71,7 @@ git clone https://github.com/very20101/openwrt_retry packages/op-retry
 
 ## luci-app-ssr-plus
 #rm -rf packages/smpackage/luci-app-ssr-plus
-# mv cp -rf packages/op-retry/pkg_modified/luci-app-ssr-plus packages/smpackage/luci-app-ssr-plus
+# mv packages/op-retry/pkg_modified/luci-app-ssr-plus packages/smpackage/luci-app-ssr-plus
 
 ## curl
 #rm -rf feeds/packages/net/curl
@@ -81,22 +81,22 @@ git clone https://github.com/very20101/openwrt_retry packages/op-retry
 # cp -rf packages/op-retry/pkg_modified/luci-app-dnscrypt-proxy2 packages/luci-app-dnscrypt-proxy2
 
 ## ruby 
-rm -rf feeds/packages/lang/ruby
-cp -rf packages/op-retry/pkg_modified/ruby feeds/packages/lang/ruby
+rm -f feeds/packages/lang/ruby
+cp -f packages/op-retry/pkg_modified/ruby feeds/packages/lang/ruby
 
 ## replace extra-package
 #git clone -b main https://github.com/very20101/openwrt_N1-Nova packages/opwrt_N1
-#cp -rf packages/opwrt_N1/extra-package/shadowsocksr-libev feeds/packages/shadowsocksr-libev
+#cp -f packages/opwrt_N1/extra-package/shadowsocksr-libev feeds/packages/shadowsocksr-libev
 rm -rf feeds/packages/shadowsocks-libev
-cp -rf packages/op-retry/pkg_modified/shadowsocks-libev feeds/packages/shadowsocks-libev
+cp -f packages/op-retry/pkg_modified/shadowsocks-libev feeds/packages/shadowsocks-libev
 rm -rf feeds/smpackage/luci-app-passwall2
-cp -rf packages/op-retry/pkg_modified/luci-app-passwall2 package/feeds/smpackage/luci-app-passwall2
-cp -rf packages/op-retry/pkg_modified/luci-app-diskman package/feeds/smpackage/luci-app-diskman
+cp -f packages/op-retry/pkg_modified/luci-app-passwall2 package/feeds/smpackage/luci-app-passwall2
+cp -f packages/op-retry/pkg_modified/luci-app-diskman package/feeds/smpackage/luci-app-diskman
 
 rm -rf package/feeds/smpackage/lua-neturl
-cp -rf packages/op-retry/pkg_modified/lua-neturl package/feeds/smpackage/lua-neturl
+cp -f packages/op-retry/pkg_modified/lua-neturl package/feeds/smpackage/lua-neturl
 
-#rm -rf packages/opwrt_N1
+#rm -f packages/opwrt_N1
 rm -rf packages/op-retry
 
 # replace golang
