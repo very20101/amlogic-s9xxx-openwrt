@@ -33,12 +33,12 @@ git clone -b master --single-branch https://github.com/LGA1150/openwrt-fullconen
 
 # themes
 git clone https://github.com/rosywrt/luci-theme-rosy/tree/openwrt-18.06/luci-theme-rosy.git packages/luci-theme-rosy
-git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git package/sluci-theme-infinityfreedom
+git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git packages/sluci-theme-infinityfreedom
 git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git packages/luci-theme-opentomcat
 git clone https://github.com/sirpdboy/luci-theme-opentopd.git packages/luci-theme-opentopd
 
 ## Add extra package
-#git clone https://github.com/kenzok8/openwrt-packages packages/openwrt-packages
+git clone git clone https://github.com/kenzok8/small-package smpackage
 #git clone https://github.com/kenzok8/small packages/small
 #rm -rf package/small/shadowsocks-rust
 #merge_package https://github.com/xiaorouji/openwrt-passwall-packages/shadowsocks-rust package/small/shadowsocks-rust
