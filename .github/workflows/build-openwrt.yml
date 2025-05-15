@@ -309,10 +309,7 @@ jobs:
               REPO_BRANCH="master"
               TAGS_NAME="immortalwrt"
           else
-              echo "Default source code repository."
-              REPO_URL="https://github.com/openwrt/openwrt"
-              REPO_BRANCH="main"
-              TAGS_NAME="official"
+              echo "Unknown source code repository."
               exit 1
           fi
 
