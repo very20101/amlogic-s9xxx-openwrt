@@ -1,4 +1,4 @@
-#============================================================================================
+t#============================================================================================
 # https://github.com/ophub/amlogic-s9xxx-openwrt
 # Description: Build OpenWrt
 #============================================================================================
@@ -309,7 +309,10 @@ jobs:
               REPO_BRANCH="master"
               TAGS_NAME="immortalwrt"
           else
-              echo "Unknown source code repository."
+              echo "Default source code repository."
+              REPO_URL="https://github.com/openwrt/openwrt"
+              REPO_BRANCH="main"
+              TAGS_NAME="official"
               exit 1
           fi
 
