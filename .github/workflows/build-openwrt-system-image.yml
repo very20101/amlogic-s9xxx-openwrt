@@ -333,8 +333,9 @@ jobs:
           [[ -f "${FEEDS_CONF}" ]] && cp -f ${FEEDS_CONF} openwrt/feeds.conf.default
           chmod +x ${DIY_P1_SH}
           cd openwrt/
+          git clone https://github.com/kenzok8/small-package packages/smpackage
           ${GITHUB_WORKSPACE}/${DIY_P1_SH}
-
+          
       - name: Update feeds
         run: cd openwrt/ && ./scripts/feeds update -a
 
