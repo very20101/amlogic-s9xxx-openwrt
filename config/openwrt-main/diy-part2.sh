@@ -23,7 +23,7 @@
 #echo 'src-git luci https://github.com/openwrt/luci.git' >>feeds.conf.default
 #echo 'src-git routing https://git.openwrt.org/feed/routing.git' >>feeds.conf.default
 #echo 'src-git telephony https://git.openwrt.org/feed/telephony.git' >>feeds.conf.default
-#git clone https://github.com/kenzok8/small-package packages/smpackage
+git clone https://github.com/kenzok8/small-package packages/smpackage
 #git clone  https://github.com/kenzok8/openwrt-packages.git packages/kenzo
 #git clone  https://github.com/kenzok8/small.git packages/small
 
@@ -95,6 +95,9 @@ cp -rf packages/op-retry/pkg_modified/luci-app-diskman package/feeds/smpackage/l
 
 rm -rf package/feeds/smpackage/lua-neturl
 cp -rf packages/op-retry/pkg_modified/lua-neturl package/feeds/smpackage/lua-neturl
+
+rm -rf feeds/packages/utils/pv/Makefile
+cp -rf packages/op-retry/patch/Makefile feeds/packages/utils/pv/Makefile
 
 #rm -rf packages/opwrt_N1
 rm -rf packages/op-retry
