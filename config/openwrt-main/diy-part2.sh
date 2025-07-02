@@ -23,7 +23,7 @@
 #echo 'src-git luci https://github.com/openwrt/luci.git' >>feeds.conf.default
 #echo 'src-git routing https://git.openwrt.org/feed/routing.git' >>feeds.conf.default
 #echo 'src-git telephony https://git.openwrt.org/feed/telephony.git' >>feeds.conf.default
-git clone https://github.com/kenzok8/small-package packages/smpackage
+#git clone https://github.com/kenzok8/small-package packages/smpackage
 #git clone  https://github.com/kenzok8/openwrt-packages.git packages/kenzo
 #git clone  https://github.com/kenzok8/small.git packages/small
 
@@ -36,6 +36,8 @@ git clone https://github.com/rosywrt/luci-theme-rosy/tree/openwrt-18.06/luci-the
 git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git packages/uci-theme-infinityfreedom
 git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git packages/luci-theme-opentomcat
 git clone https://github.com/sirpdboy/luci-theme-opentopd.git packages/luci-theme-opentopd
+
+git clone https://github.com/kenzok8/small-package packages/smpackage
 
 ## Add extra package
 #git clone https://github.com/kenzok8/small-package smpackage
