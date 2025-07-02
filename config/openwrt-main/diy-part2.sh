@@ -23,7 +23,7 @@
 #echo 'src-git luci https://github.com/openwrt/luci.git' >>feeds.conf.default
 #echo 'src-git routing https://git.openwrt.org/feed/routing.git' >>feeds.conf.default
 #echo 'src-git telephony https://git.openwrt.org/feed/telephony.git' >>feeds.conf.default
-#git clone https://github.com/kenzok8/small-package packages/smpackage
+git clone https://github.com/kenzok8/small-package packages/smpackage
 #git clone  https://github.com/kenzok8/openwrt-packages.git packages/kenzo
 #git clone  https://github.com/kenzok8/small.git packages/small
 
@@ -44,7 +44,7 @@ git clone https://github.com/sirpdboy/luci-theme-opentopd.git packages/luci-them
 #merge_package https://github.com/xiaorouji/openwrt-passwall-packages/shadowsocks-rust package/small/shadowsocks-rust
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 #sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
-sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
+#sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
 
 ## Add deps(from other source)
 #merge_package https://github.com/coolsnowwolf/lede/package/lean/libcryptopp package/libcryptopp
