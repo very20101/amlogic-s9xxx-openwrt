@@ -329,11 +329,11 @@ jobs:
           echo "status=success" >> ${GITHUB_OUTPUT}
 
       - name: Load custom feeds
+          cd openwrt/
+          git clone https://github.com/kenzok8/small-package packages/smpackage
         run: |
           [[ -f "${FEEDS_CONF}" ]] && cp -f ${FEEDS_CONF} openwrt/feeds.conf.default
           chmod +x ${DIY_P1_SH}
-          cd openwrt/
-          git clone https://github.com/kenzok8/small-package packages/smpackage
           ${GITHUB_WORKSPACE}/${DIY_P1_SH}
           
       - name: Update feeds
