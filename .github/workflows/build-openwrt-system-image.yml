@@ -319,6 +319,8 @@ jobs:
           git clone -q --single-branch --depth=1 --branch=${REPO_BRANCH} ${REPO_URL} openwrt
           ln -sf /builder/openwrt ${GITHUB_WORKSPACE}/openwrt
           ln -sf /builder/openwrt /home/runner/work/_actions/ophub/amlogic-s9xxx-openwrt/main/openwrt
+          cd openwrt/
+          git clone https://github.com/kenzok8/small-package packages/smpackage
 
           # Set output information
           echo "build_tag=OpenWrt_${TAGS_NAME}_${{ inputs.openwrt_storage }}_$(date +"%Y.%m")" >> ${GITHUB_OUTPUT}
@@ -329,8 +331,6 @@ jobs:
           echo "status=success" >> ${GITHUB_OUTPUT}
 
       - name: Load custom feeds
-          cd openwrt/
-          git clone https://github.com/kenzok8/small-package packages/smpackage
         run: |
           [[ -f "${FEEDS_CONF}" ]] && cp -f ${FEEDS_CONF} openwrt/feeds.conf.default
           chmod +x ${DIY_P1_SH}
