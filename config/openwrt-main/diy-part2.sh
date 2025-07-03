@@ -104,6 +104,9 @@ cp -rf packages/op-retry/patch/Makefile feeds/packages/utils/pv/Makefile
 rm -rf feeds/packages/lang/rust
 cp -rf packages/op-retry/rust feeds/packages/lang/rust
 
+rm -rf package/smpackage/lua-neturl/Makefile
+cp -rf packages/op-retry/patch/Makefil-lua-neturl package/smpackage/lua-neturl/Makefile
+
 #rm -rf packages/opwrt_N1
 rm -rf packages/op-retry
 
