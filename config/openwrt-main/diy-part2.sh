@@ -37,7 +37,7 @@ git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git pac
 git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git packages/luci-theme-opentomcat
 git clone https://github.com/sirpdboy/luci-theme-opentopd.git packages/luci-theme-opentopd
 
-#git clone https://github.com/very20101/small-package packages/smpackage
+git clone https://github.com/very20101/small-package packages/smpackage
 
 ## Add extra package
 #git clone https://github.com/kenzok8/small-package smpackage
@@ -66,7 +66,7 @@ sed -i 's/192.168.1.1/192.168.1.200/g' package/base-files/files/bin/config_gener
 
 ## replace libs for shadowsocks-libev error
 #rm -rf package/libs/mbedtls  package/libs/ustream-ssl package/libs/uclient
-git clone https://github.com/very20101/openwrt_retry packages/op-retry
+#git clone https://github.com/very20101/openwrt_retry packages/op-retry
 #mv packages/op-retry/libs/mbedtls package/libs/mbedtls
 #mv packages/op-retry/libs/ustream-ssl package/libs/ustream-ssl
 #mv packagse/op-retry/libs/uclient package/libs/uclient
@@ -83,26 +83,26 @@ git clone https://github.com/very20101/openwrt_retry packages/op-retry
 # cp -rf packages/op-retry/pkg_modified/luci-app-dnscrypt-proxy2 packages/luci-app-dnscrypt-proxy2
 
 ## ruby 
-rm -rf feeds/packages/lang/ruby
-cp -rf packages/op-retry/pkg_modified/ruby feeds/packages/lang/ruby
+#rm -rf feeds/packages/lang/ruby
+#cp -rf packages/op-retry/pkg_modified/ruby feeds/packages/lang/ruby
 
 ## replace extra-package
 #git clone -b main https://github.com/very20101/openwrt_N1-Nova packages/opwrt_N1
 #cp -f packages/opwrt_N1/extra-package/shadowsocksr-libev feeds/packages/shadowsocksr-libev
-rm -rf feeds/packages/shadowsocks-libev
-cp -rf packages/op-retry/pkg_modified/shadowsocks-libev feeds/packages/shadowsocks-libev
-rm -rf feeds/smpackage/luci-app-passwall2
-cp -rf packages/op-retry/pkg_modified/luci-app-passwall2 package/feeds/smpackage/luci-app-passwall2
-cp -rf packages/op-retry/pkg_modified/luci-app-diskman package/feeds/smpackage/luci-app-diskman
+#rm -rf feeds/packages/shadowsocks-libev
+#cp -rf packages/op-retry/pkg_modified/shadowsocks-libev feeds/packages/shadowsocks-libev
+#rm -rf feeds/smpackage/luci-app-passwall2
+#cp -rf packages/op-retry/pkg_modified/luci-app-passwall2 package/feeds/smpackage/luci-app-passwall2
+#cp -rf packages/op-retry/pkg_modified/luci-app-diskman package/feeds/smpackage/luci-app-diskman
 
-rm -rf package/feeds/smpackage/lua-neturl
-cp -rf packages/op-retry/pkg_modified/lua-neturl package/feeds/smpackage/lua-neturl
+#rm -rf package/feeds/smpackage/lua-neturl
+#cp -rf packages/op-retry/pkg_modified/lua-neturl package/feeds/smpackage/lua-neturl
 
-rm -rf feeds/packages/utils/pv/Makefile
-cp -rf packages/op-retry/patch/Makefile feeds/packages/utils/pv/Makefile
+#rm -rf feeds/packages/utils/pv/Makefile
+#cp -rf packages/op-retry/patch/Makefile feeds/packages/utils/pv/Makefile
 
-rm -rf feeds/packages/lang/rust
-cp -rf packages/op-retry/rust feeds/packages/lang/rust
+#rm -rf feeds/packages/lang/rust
+#cp -rf packages/op-retry/rust feeds/packages/lang/rust
 
 rm -rf package/smpackage/lua-neturl/Makefile
 cp -rf packages/op-retry/patch/Makefile-lua-neturl package/smpackage/lua-neturl/Makefile
