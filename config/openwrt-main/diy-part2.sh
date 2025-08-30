@@ -101,8 +101,8 @@ cp -rf packages/op-retry/pkg_modified/shadowsocks-libev feeds/packages/shadowsoc
 rm -rf feeds/packages/utils/pv/Makefile
 cp -rf packages/op-retry/patch/Makefile feeds/packages/utils/pv/Makefile
 
-#rm -rf feeds/packages/lang/rust
-#cp -rf packages/op-retry/rust feeds/packages/lang/rust
+rm -rf package/feeds/packages/rust
+cp -rf packages/op-retry/rust feeds/packages/lang/rust
 
 rm -rf package/smpackage/lua-neturl/Makefile
 cp -rf packages/op-retry/patch/Makefile-lua-neturl package/smpackage/lua-neturl/Makefile
