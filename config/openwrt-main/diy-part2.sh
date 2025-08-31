@@ -104,7 +104,9 @@ cp -rf packages/op-retry/patch/Makefile feeds/packages/utils/pv/Makefile
 rm -rf package/feeds/packages/rust
 cp -rf packages/op-retry/rust feeds/packages/lang/rust
 
-rm -rf package/smpackage/lua-neturl/Makefile feeds/smpackage/lua-neturl/Makefile
+rm -rf package/smpackage/lua-neturl/Makefile package/feeds/smpackage/lua-neturl/Makefile feeds/smpackage/lua-neturl/Makefile
+cp -rf packages/op-retry/patch/Makefile-lua-neturl package/smpackage/lua-neturl/Makefile
+cp -rf packages/op-retry/patch/Makefile-lua-neturl package/feeds/smpackage/lua-neturl/Makefile
 cp -rf packages/op-retry/patch/Makefile-lua-neturl feeds/smpackage/lua-neturl/Makefile
 
 #rm -rf package/base-files/Makefile
