@@ -270,8 +270,9 @@ jobs:
           sudo -E apt-get -y purge azure-cli ghc* zulu* llvm* firefox google* dotnet* powershell openjdk* mongodb* moby* || true
           sudo -E apt-get -y install $(curl -fsSL https://tinyurl.com/ubuntu2204-make-openwrt)
           sudo -E apt-get -y install libncursesw6 
-          sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-          sudo cargo --version
+          sudo -E apt-get -y install cargo
+          rustc --version
+          cargo --version
           sudo -E systemctl daemon-reload
           #sudo -E apt-get -y full-upgrade
           sudo -E apt-get -y autoremove --purge
