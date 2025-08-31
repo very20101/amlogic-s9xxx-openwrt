@@ -269,8 +269,9 @@ jobs:
           sudo -E apt-get -y update
           sudo -E apt-get -y purge azure-cli ghc* zulu* llvm* firefox google* dotnet* powershell openjdk* mongodb* moby* || true
           sudo -E apt-get -y install $(curl -fsSL https://tinyurl.com/ubuntu2204-make-openwrt)
-          sudo -E apt-get -y install libncursesw6 
+          sudo -E apt-get -y install libncursesw6
           sudo -E apt-get -y install cargo
+          sudo echo '\n# Add .cargo to $PATH\nexport PATH="~/.cargo/bin:$PATH"\n' >> ~/.zshrc
           rustc --version
           cargo --version
           sudo -E systemctl daemon-reload
