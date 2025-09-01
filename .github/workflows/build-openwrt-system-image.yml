@@ -271,8 +271,8 @@ jobs:
           sudo -E apt-get -y install $(curl -fsSL https://tinyurl.com/ubuntu2204-make-openwrt)
           sudo -E apt-get -y install libncursesw6
           sudo -E apt-get -y install cargo
-          sudo rustup update stable
-          #sudo rustup install nightly && sudo rustup update
+          #sudo rustup install nightly
+          sudo rustup install stable && sudo rustup update
           sudo echo '\n# Add .cargo to $PATH\nexport PATH="~/.cargo/bin:$PATH"\n' >> ~/.zshrc
           rustc --version
           cargo --version
