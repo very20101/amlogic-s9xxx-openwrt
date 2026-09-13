@@ -391,6 +391,7 @@ jobs:
         id: compile
         run: |
           cd openwrt/
+          export GOTOOLCHAIN=auto
           rm -rf package/feeds/smpackage/shadowsocksr-libev
           rm -rf package/feeds/smpackage/shadowsocks-rust
           rm -rf package/feeds/smpackage/trojan-plus
