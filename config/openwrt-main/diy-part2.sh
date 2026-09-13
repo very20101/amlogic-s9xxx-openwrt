@@ -83,8 +83,8 @@ git clone https://github.com/very20101/openwrt_retry packages/op-retry
 # cp -rf packages/op-retry/pkg_modified/luci-app-dnscrypt-proxy2 packages/luci-app-dnscrypt-proxy2
 
 ## ruby 
-rm -rf feeds/packages/lang/ruby
-cp -rf packages/op-retry/pkg_modified/ruby feeds/packages/lang/ruby
+#rm -rf feeds/packages/lang/ruby
+#cp -rf packages/op-retry/pkg_modified/ruby feeds/packages/lang/ruby
 
 ## replace extra-package
 #git clone -b main https://github.com/very20101/openwrt_N1-Nova packages/opwrt_N1
@@ -95,14 +95,14 @@ cp -rf packages/op-retry/pkg_modified/shadowsocks-libev feeds/packages/shadowsoc
 #cp -rf packages/op-retry/pkg_modified/luci-app-passwall2 package/feeds/smpackage/luci-app-passwall2
 #cp -rf packages/op-retry/pkg_modified/luci-app-diskman package/feeds/smpackage/luci-app-diskman
 
-#rm -rf package/feeds/smpackage/lua-neturl feeds/smpackage/lua-neturl
-#cp -rf packages/op-retry/pkg_modified/lua-neturl feeds/smpackage/lua-neturl
+rm -rf package/feeds/smpackage/lua-neturl feeds/smpackage/lua-neturl
+cp -rf packages/op-retry/pkg_modified/lua-neturl feeds/smpackage/lua-neturl
 
-rm -rf feeds/packages/utils/pv/Makefile
-cp -rf packages/op-retry/patch/Makefile feeds/packages/utils/pv/Makefile
+#rm -rf feeds/packages/utils/pv/Makefile
+#cp -rf packages/op-retry/patch/Makefile feeds/packages/utils/pv/Makefile
 
-rm -rf package/feeds/packages/rust
-cp -rf packages/op-retry/rust feeds/packages/lang/rust
+#rm -rf package/feeds/packages/rust
+#cp -rf packages/op-retry/rust feeds/packages/lang/rust
 
 rm -rf package/smpackage/lua-neturl/Makefile package/feeds/smpackage/lua-neturl/Makefile feeds/smpackage/lua-neturl/Makefile
 cp -rf packages/op-retry/patch/Makefile-lua-neturl package/smpackage/lua-neturl/Makefile
