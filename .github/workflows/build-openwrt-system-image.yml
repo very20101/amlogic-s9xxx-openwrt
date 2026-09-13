@@ -365,6 +365,11 @@ jobs:
           cd openwrt/
           ${GITHUB_WORKSPACE}/${DIY_P2_SH}
 
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with: 
+              go-version: '1.26.6'
+       
       - name: Download package
         id: package
         run: |
